@@ -1,0 +1,21 @@
+.topline-right ul {
+    list-style: none;
+    width: auto;
+}
+.topline-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.topline-right ul li {
+    float: right;
+    margin-right: 1.5cm;
+    overflow: hidden;
+}
+.topline-right ul li a:hover {
+    color: rgb(200, 255, 0);
+}
+.topline-right ul li a {
+    text-decoration: none ;
+    color: rgb(255, 255, 255);
+}

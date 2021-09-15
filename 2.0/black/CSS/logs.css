@@ -1,0 +1,22 @@
+.ul {
+    list-style: none;
+}
+.null {
+    color: rgba(74, 116, 110, 0.39);
+}
+.new {
+    color: rgb(1, 199, 1);
+    font-weight: bolder;
+}
+.change {
+    color: rgb(149, 0, 194);
+    font-weight: bolder;
+}
+.delete {
+    color: red;
+    font-weight: bolder;
+}
+.repair {
+    color: aqua;
+    font-weight: bolder;
+}
