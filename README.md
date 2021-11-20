@@ -1,4 +1,3 @@
-# -This is a website from a student.
-# -You can tell me with bugs.
-# -Don't break my file.
-# -Website Files update every Months!
+# -This is a student's website.
+# -The website will be updated from time to time. 
+# -Please don't destroy my website files.
