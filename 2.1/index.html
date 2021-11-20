@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<!-- 声明：本网站仅供学习使用，不作任何商业用途，与本网站有关纠纷，作者及热铁盒官方不负任何责任。 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青苹 • 初始
+    </title>
+    <!-- 网页标题图标 -->
+    <link href="https://gitee.com/ran746/images/raw/master/狗头鬼畜.ico" rel="shortcut icon" />
+    <!-- // -->
+</head>
+
+<body>
+    <script>
+        //建站时间
+        function setUpTime() {
+            var time = new Date().getTime();
+            var cha = time - 1628179200000;
+            var TIME = parseInt(cha / 86400000);
+            var greeting = "本站已经运行" + TIME + "天了呢！"
+            alert(greeting + '\n网站使用Apache2.0开源许可证，转载、使用、修改请标明原网站和原作者: 阿特小屋Dotl\n声明：本网站仅供学习使用，不作任何商业用途，与本网站有关纠纷，作者及热铁盒官方不负任何责任。\nGitHub：https\:\/\/github.com/ran746/Website-Source-Code\n已停止在gitee更新\n新版本不稳定，bug多，感谢您来提出宝贵的建议！\n|随缘更新|');
+            console.log("建站时间计算：")
+            console.log("time=" + time);
+            console.log("cha=" + cha);
+            console.log("TIME=" + TIME);
+            //2021.10.8
+        }
+        function turnDark() {
+            document.getElementById('backImg').src = 'https://tva3.sinaimg.cn/large/008fwlZJgy1gvh7s6mwy9j60zk0np45202.jpg';
+            document.getElementById('backImgA').style.display = 'none';
+            document.getElementById('backImgB').style.display = 'block';
+
+        }
+        function turnBright() {
+            document.getElementById('backImg').src = 'https://baotangguo.cn:8081/';
+            document.getElementById('backImgB').style.display = 'none';
+            document.getElementById('backImgA').style.display = 'block';
+        }
+    </script>
+    <!-- CSS -->
+    <link rel=" stylesheet" href="CSS/bottomline.css">
+    <link rel="stylesheet" href="CSS/background.css">
+    <link rel="stylesheet" href="CSS/topline-right.css">
+    <style>
+        .ssk {
+            position: absolute;
+            width: 60%;
+            top: 42%;
+            left: 20%;
+            height: 1cm;
+        }
+
+        .ssk-button {
+            position: absolute;
+            top: 41%;
+            left: 80%;
+            height: 1.8cm;
+        }
+    </style>
+    <!-- 网页背景 -->
+    <img src="https://baotangguo.cn:8081/" id="backImg" class="blur">
+    <!-- bing每日一图来自https://www.cnblogs.com/ytryhard/p/15247120.html分享的脚本抓取地址 -->
+    <!-- 2021/8/12 -->
+    <!-- 左下导航栏 -->
+    <div class="bottomline">
+        <ul>
+            <li><a href="feedback.html" target="_blank" title="反馈问题">反馈</a></li>
+            <li><a href="LOGs.html" target="_blank" title="关于网站">日志</a></li>
+            <li><a onclick="setUpTime()">关于</a></li>
+            <li>
+            </li>
+        </ul>
+    </div>
+    <!-- 2021/8/9 -->
+    <!-- 右上导航栏 -->
+    <div class="topline-right">
+        <ul>
+            <li>
+                <a id="backImgA" onclick="turnDark()" title="暗黑模式">
+                    <img src="https://s3.bmp.ovh/imgs/2021/09/077ce8095ebcbc23.png" width="10%"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="topline-right">
+        <ul>
+            <li>
+                <a id="backImgB" onclick="turnBright()" title="日常模式" style="display: none;"><img
+                        src="https://s3.bmp.ovh/imgs/2021/09/2d2ac936e1b95ee4.png" width="10%"></a>
+            </li>
+        </ul>
+    </div>
+    <!-- 2021/8/12 -->
+    <!-- logo -->
+    <div style="text-align: center;">
+        <img class="image1" title="CAE" width="20%" src="https://s3.bmp.ovh/imgs/2021/09/eb1cccedafc0e594.png">
+    </div>
+    <!-- 2021/8/5/10:43 -->
+    <!-- 搜索框 -->
+    <div align="center">
+        <form name="sou-suo-kuang" method="GET" action="https://www.baidu.com/s">
+            <input class="ssk" type="text" name="wd">
+            <input class="ssk-button" type="image" src="https://s3.bmp.ovh/imgs/2021/11/e1731dbed361e1b6.png"
+                alt="使用百度搜索">
+        </form>
+    </div>
+    <!-- 2021/8/5/11:02 -->
+</body>
+<!-- 声明：本网站仅供学习使用，不作任何商业用途，与本网站有关纠纷，作者及热铁盒官方不负任何责任。 -->
+
+</html>

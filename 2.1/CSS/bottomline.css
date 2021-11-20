@@ -1,0 +1,24 @@
+.bottomline ul {
+    list-style: none;
+    width: auto;
+}
+.bottomline {
+    position: fixed;
+    top: 95%;
+    background-color: rgba(12, 12, 12, 0.5);
+    width: 100%;
+    height: 5%;
+}
+.bottomline ul li {
+    float: left;
+    margin-right: 1cm;
+    overflow: hidden;
+    position: relative;
+}
+.bottomline ul li a:hover {
+    color: rgb(0, 255, 242);
+}
+.bottomline ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
