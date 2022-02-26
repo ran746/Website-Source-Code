@@ -1,0 +1,17 @@
+#back {
+    position: absolute;
+    top: 250px;
+    height: 90%;
+    width: 99%;
+    z-index: -2;
+}
+.headline {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(77, 77, 77);
+}
+.subhead {
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+}

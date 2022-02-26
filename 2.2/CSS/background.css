@@ -1,0 +1,50 @@
+.blur {
+    position: fixed;
+    height: 103%;
+    width: 102%;
+    left: -1%;
+    top: -1%;
+    z-index: -3;
+    filter: blur(9px);/*仅Chrome, Opera, Safari支持*/
+}
+/* 背景模糊效果 */
+#ssk {
+    position: absolute;
+    /*绝对定位*/
+    width: 60%;
+    top: 42%;
+    left: 20%;
+    height: 1cm;
+    border-radius: 42px;
+    /*外边框圆角*/
+    border: 2px solid #555555;
+    background-color: rgb(197, 197, 197);
+    transition: .3s linear;
+    float: left;
+}
+
+#ssk:focus {
+    width: 61%;
+}
+
+#search :hover {
+    background-color: white;
+}
+
+#sskButton {
+    position: absolute;
+    top: 41.5%;
+    left: 81.2%;
+    height: 51.5px;
+    mix-blend-mode: darken;
+}
+
+#newTime {
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
+    /*透明度*/
+    text-align: center;
+    font-size: 90px;
+    /*字体大小*/
+}
+/* 搜索框 */
