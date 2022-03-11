@@ -1,3 +1,3 @@
-# -This is a student's website.
-# -The website will be updated from time to time. 
-# -Please don't destroy my website files.
+# -随便敲的一个起始页
+
+
