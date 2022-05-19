@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh_CN" style="height: 100%;">
+<!-- 声明：本网站仅供学习使用，不作任何商业用途，与本网站有关纠纷，作者及热铁盒官方不负任何责任。 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinStart
+    </title>
+    <!-- 网页标题图标 -->
+    <link href="https://s3.bmp.ovh/imgs/2021/09/eb1cccedafc0e594.png" rel="shortcut icon" />
+</head>
+
+<body id="body" style="background-color: rgb(41, 41, 41);" onkeydown="javascript:keyDown()">
+    <!-- CSS -->
+    <link rel=" stylesheet" href="CSS/bottomline.css">
+    <link rel="stylesheet" href="CSS/background.css">
+    <link rel="stylesheet" href="CSS/topline-right.css">
+    <!-- 网页背景 -->
+    <img src="https://baotangguo.cn:8081/" id="backImg" class="blur">
+    <!-- bing每日一图来自https://www.cnblogs.com/ytryhard/p/15247120.html分享的api -->
+    <!-- 正中时间显示 -->
+    <p title="时间" id="newTime" onmouseover="timeShow()" onmouseout="timeHide()">正在努力加载中…</p>
+    <p id="detailT">加载中…</p>
+    <p id="timeh" class="timeHide">当前详细时间</p>
+    <!-- 左下导航栏 -->
+    <div class="bottomline">
+        <ul>
+            <li><a href="feedback.html" target="_blank" title="反馈问题">
+                    <img class="bottomWord" id="fan" src="https://s4.ax1x.com/2022/01/01/T5MqGd.png" alt="反">
+                    <img class="bottomWord" id="kui" src="https://s4.ax1x.com/2022/01/01/T5QPiQ.png" alt="馈"></a></li>
+            <li><a href="logs.html" target="_blank" title="更新日志">
+                    <img class="bottomWord" id="ri" src="https://s4.ax1x.com/2022/01/01/T5QiGj.png" alt="日">
+                    <img class="bottomWord" id="zhi" src="https://s4.ax1x.com/2022/01/01/T5QEMq.png" alt="志"></a></li>
+            <li><a style="cursor:pointer;" onclick="setUpTime()" id="myBtn" title="关于网站">
+                    <img class="bottomWord" id="guan" src="https://s4.ax1x.com/2022/01/01/T5QSZ8.png" alt="关">
+                    <img class="bottomWord" id="yu" src="https://s4.ax1x.com/2022/01/01/T5Qkzn.png" alt="于">
+                </a></li>
+            <li>
+                <a href="blog.html" target="_blank" title="老阿特-博客">
+                    <img class="bottomWord" src="https://s4.ax1x.com/2022/01/16/7tIsW6.png" id="bo" alt="博">
+                    <img class="bottomWord" src="https://s4.ax1x.com/2022/01/16/7tIUL4.png" id="ke" alt="客">
+                </a>
+            </li>
+            <li><a style="cursor:pointer;" title="作者提供的友情链接啦"
+                    onclick="alert('作者友情推荐\:\n• 星语❛˓◞✧\nhttps\:\/\/ronin1.rth1.me\/\n• 老王起始页（旧）\nhttps\:\/\/lwstarting.rth1.me\/lwsbody.html\n• 老王起始页（新）\nhttps\:\/\/lwstarting.rth1.me\/main.html')">
+                    <img class="bottomWord" id="you" src="https://s4.ax1x.com/2022/01/01/T5QFRs.png" alt="友">
+                    <!-- <img class="bottomWord" id="qing" src="https://s4.ax1x.com/2022/01/01/T5Mxqf.png" alt="情"> -->
+                    <img class="bottomWord" id="lian" src="https://s4.ax1x.com/2022/01/01/T5QpdS.png" alt="链">
+                    <!-- <img class="bottomWord" id="jie" src="https://s4.ax1x.com/2022/01/01/T5Q9Ig.png" alt="接"> -->
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 右上导航栏 -->
+    <input class="rightTop" type="image" id="imgMoon" src="https://s3.bmp.ovh/imgs/2021/09/077ce8095ebcbc23.png"
+        onclick="turnDark()" alt="图片已丢失" style="display: block;" title="切换至黑夜配色">
+    <input class="rightTop" type="image" id="imgSun" src="https://s3.bmp.ovh/imgs/2021/09/2d2ac936e1b95ee4.png"
+        onclick="turnBright()" alt="图片已丢失" style="display: none;" title="切换至初始配色">
+    <input class="rightTop2" type="image" id="imgBlack" src="https://s3.bmp.ovh/imgs/2022/03/e17f3f3d22317df6.png"
+        onclick="download1()" alt="图片已丢失" style="display: block;" title="下载背景图片">
+    <input class="rightTop2" type="image" id="imgWhite" src="https://s3.bmp.ovh/imgs/2022/03/95ff23ddb1b19c70.png"
+        onclick="download2()" alt="图片已丢失" style="display: none;" title="下载背景图片">
+    <!-- 其他功能 -->
+
+    <!-- 搜索框 -->
+    <div align="center">
+        <form id="search" name="searchText" method="GET" action="https://www.baidu.com/s">
+            <!-- method数据传输方式，GET会把数据放在URL里 -->
+            <input id="ssk" type="text" name="wd" placeholder="&nbsp;&nbsp;输入并搜索……">
+            <input id="sskButton" type="image" src="https://img1.baidu.com/it/u=4085221014,1907825354&fm=26&fmt=auto"
+                alt="使用百度搜索" title="使用百度搜索">
+        </form>
+    </div>
+    <!-- 弹窗 -->
+    <div id="window" class="modal">
+        <!-- 弹窗内容 -->
+        <div class="windowContent">
+            <div class="windowHeader">
+                <span class="close">&times;</span>
+                <h2>关于网站</h2>
+            </div>
+            <div class="windowBody">
+                <p id="about1"></p>
+                <p id="about2"></p>
+                <p id="about3"></p>
+                <p id="about4"></p>
+                <p id="about5"></p>
+                <p id="about6"></p>
+            </div>
+            <div class="windowFooter"></div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="JS/about.js"></script>
+    <script src="JS/festivals.js"></script>
+    <script src="JS/modelTurn.js"></script>
+    <script src="JS/functions.js"></script>
+</body>
+<!-- 声明：本网站仅供学习使用，不作任何商业用途，与本网站有关纠纷，作者及热铁盒官方不负任何责任。 -->
+
+</html>
