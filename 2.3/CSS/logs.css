@@ -1,0 +1,53 @@
+.date {
+    color: rgba(0, 0, 0);
+    font-weight: bolder;
+}
+.null {
+    color: rgba(34, 25, 25, 0.39);
+}
+.new {
+    color: rgb(1, 199, 1);
+    font-weight: bolder;
+}
+.change {
+    color: rgb(149, 0, 194);
+    font-weight: bolder;
+}
+.delete {
+    color: red;
+    font-weight: bolder;
+}
+.repair {
+    color: aqua;
+    font-weight: bolder;
+}
+p {
+    color: rgb(255, 255, 255);
+    line-height: 3px;
+    font-weight: bolder;
+}
+li {
+    color: rgb(255, 255, 255);
+}
+.lightGround {
+    top: 0px;
+    left: 30%;
+    filter: blur(20px);/*虚化*/
+    opacity: 0.7;/*透明度*/
+    height: 105%;
+    width: 40%;
+    position: fixed;
+    z-index: -1;
+}
+.backGround {
+    position: fixed;
+    height: 103%;
+    width: 102%;
+    left: -1%;
+    top: -1%;
+    z-index: -1;
+    filter: blur(4px);
+}
+.ul {
+    list-style: none;
+}

@@ -1,0 +1,16 @@
+.rightTop {
+    position: absolute;
+    top: 8px;
+    right: 80px;
+    width: 40px;
+    cursor:pointer;
+    overflow: hidden;
+}
+.rightTop2 {
+    position: absolute;
+    top: 8px;
+    right: 30px;
+    width: 40px;
+    cursor:pointer;
+    overflow: hidden;
+}
